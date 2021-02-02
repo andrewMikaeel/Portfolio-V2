@@ -37,7 +37,6 @@ export class AppComponent implements OnInit, AfterViewInit{
   constructor() {}
 
   ngOnInit() {
-
     this.menu = [
       { name: 'Home', active: false, id: 'home', inViewPort: false, index: 0},
       { name: 'About', active: false, id: 'about', inViewPort: false, index: 1},
@@ -47,9 +46,7 @@ export class AppComponent implements OnInit, AfterViewInit{
       { name: 'Résumé', active: false, id: 'resume', inViewPort: false, index: 5},
       { name: 'GitHub', active: false, id: 'github', inViewPort: false, index: 6},
     ]
-    
     this.currentSelectedItem = this.menu[0];
-    console.log(this.currentSelectedItem.active);
   }
 
   
@@ -58,20 +55,9 @@ export class AppComponent implements OnInit, AfterViewInit{
       if(link.tagName === 'LI')
         this.links.push(link);
     });
-    console.log(this.menu[0].active);
-
-    // for(let item of this.menu){
-      // if(item.inViewPort){
-        // this.currentSelectedItem = item;
-        // this.currentSelectedItem.active = true;
-      // }
-    // }
-      
   }
   
-  close(delay?: boolean) {
-    delay ? setTimeout(() => this.closeAnimation(), 150) : this.closeAnimation();
-  }
+ 
 
   closeAnimation() {
     this.links.forEach((link: HTMLElement) => link.style.animation = '' );
@@ -86,7 +72,9 @@ export class AppComponent implements OnInit, AfterViewInit{
     this.navActive = true;
     document.body.style.overflowY = 'hidden';
   }
-
+  close(delay?: boolean) {
+    delay ? setTimeout(() => this.closeAnimation(), 150) : this.closeAnimation();
+  }
   toggle(){
     this.navActive ? this.close() : this.open();
   }
@@ -96,7 +84,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     this.close();
   }
 
-  onMenuClick(menuItem: menu, e:Event, mobile: boolean){
+  onMenuClick(menuItem: menu, mobile: boolean){
     this.clickedMenu = true;
 
     if(menuItem.index > this.currentSelectedItem.index){
@@ -108,9 +96,6 @@ export class AppComponent implements OnInit, AfterViewInit{
       this.goingUp = true;
     }
     this.currentCountMenu = 0;
-
-    console.log(this.stopeAtMenuIndex + " " + this.currentCountMenu);
-    
     
     if(this.menu[1] === menuItem)
       this.aboutClicked = true;
@@ -121,192 +106,88 @@ export class AppComponent implements OnInit, AfterViewInit{
       this.smoothScroll(menuItem, mobile)
       this.close(true);
       return;
+    }else {
+      this.currentSelectedItem.active = false;
+      this.currentSelectedItem = menuItem;
+      this.smoothScroll(menuItem, mobile);
+      menuItem.active = true;
+      this.currentSelectedItem.name = menuItem.name;
     }
-    else {
-            this.currentSelectedItem.active = false;
-            this.currentSelectedItem = menuItem;
-            this.smoothScroll(menuItem, mobile);
-            menuItem.active = true;
-            this.currentSelectedItem.name = menuItem.name;
-          }
       this.close(true);
   }
   
   inViewPort(menuItemIndex:number, e:any){
-    console.log(e);
-    // console.log(this.menu[menuItemIndex]);
     this.menu[menuItemIndex].inViewPort = e.visible;
-    // console.log(this.menu);
 
-   
-
+    //Initialy this function run for each section
     if(this.inViewPortCount < 5){
-      // console.log('Here');
-      
       if(e.visible){
         this.currentSelectedItem.active = false;
         this.currentSelectedItem = this.menu[menuItemIndex];
         this.currentSelectedItem.active = true;
-        // this.currentSelectedItem.inViewPort = true;
       }
       this.inViewPortCount++;
       return;
     }
 
-    // if(this.aboutClicked) {
-    //   console.log('yo');
-      
-    //   this.aboutClicked = false;
-    //   this.currentSelectedItem.active = false;
-    //   this.currentSelectedItem = this.menu[1];
-    //   this.currentSelectedItem.active = true;
-    //   return;
-    // }
 
-    // if(this.clickedMenu && this.currentCountMenu < this.stopeAtMenuIndex+5){
-      // console.log(this.currentCountMenu);
-      // this.currentCountMenu ++;
-    // }else if(this.clickedMenu){
-      // this.clickedMenu = false;
-      // return;
-    // }
-
-    // console.log(`menuItemIndex: ${menuItemIndex} visible: ${e.visible}  contact Active: ${this.menu[4].active} Prjects in ViewPort: ${this.menu[3].inViewPort}` )
     if(menuItemIndex === 1 && this.menu[1].active && !e.visble && !this.menu[2].inViewPort && this.menu[0].inViewPort){
       if(this.clickedMenu && this.currentCountMenu < this.stopeAtMenuIndex){
         this.currentCountMenu++;
-        console.log(this.currentCountMenu);
-
       }else {
-        this.currentSelectedItem.active = false;
-        this.currentSelectedItem = this.menu[0];
-        this.currentSelectedItem.active = true;
-        this.clickedMenu = false;
+        this.changeMenuItem(0);
       }
     }else if((menuItemIndex === 0 || menuItemIndex === 2) &&(!e.visible) && (this.menu[1].inViewPort)){
       if(this.clickedMenu && this.currentCountMenu < this.stopeAtMenuIndex){
         this.currentCountMenu++;
-        console.log(this.currentCountMenu);
       }else {
-        this.currentSelectedItem.active = false;
-        this.currentSelectedItem = this.menu[1];
-        this.currentSelectedItem.active = true;
-        this.clickedMenu = false;
+        this.changeMenuItem(1);
       }
     }else if ((menuItemIndex === 1 || menuItemIndex == 3) && (!e.visible) && (this.menu[2].inViewPort)){
-        // console.log('2, menuIndex: ' + menuItemIndex + 'visible: ' + e.visible);
         if(this.clickedMenu && this.currentCountMenu < this.stopeAtMenuIndex){
           if(this.aboutClicked)
             this.aboutClicked = false;
           this.currentCountMenu += 2;
-          // }
-          // else
-            // this.currentCountMenu++;
-          console.log(this.currentCountMenu);
         }else {
-          this.currentSelectedItem.active = false;
-          this.currentSelectedItem = this.menu[2];
-          this.currentSelectedItem.active = true;
-          this.clickedMenu = false;
+          this.changeMenuItem(2);
         }
     }else if ((menuItemIndex === 4 || menuItemIndex === 2)&&(!e.visible) && (this.menu[3].inViewPort)) {
       if(this.clickedMenu && this.currentCountMenu < this.stopeAtMenuIndex){
         this.currentCountMenu++;
-        console.log(this.currentCountMenu);
       }else {
-        this.currentSelectedItem.active = false;
-        this.currentSelectedItem = this.menu[3];
-        this.currentSelectedItem.active = true;
-        this.clickedMenu = false;
+        this.changeMenuItem(3);
       }
     }else if(menuItemIndex === 4 && e.visible && (this.menu[4].inViewPort)){
       if(this.clickedMenu && this.currentCountMenu < this.stopeAtMenuIndex){
         this.currentCountMenu++;
-        console.log(this.currentCountMenu);
       }else {
-        this.currentSelectedItem.active = false;
-        this.currentSelectedItem = this.menu[4];
-        this.currentSelectedItem.active = true;
-        this.clickedMenu = false;
+        this.changeMenuItem(4);
       }
     } 
+  }
 
-
-    // if(menuItemIndex === 2 && this.aboutClicked){
-    //   this.aboutClicked = false;
-    //   return;
-    // }
-
-    // if(menuItemIndex === 4 && !e.visible && this.menu[4].active) {
-    //   this.currentSelectedItem.active = false;
-    //   this.currentSelectedItem = this.menu[3];
-    //   this.currentSelectedItem.active = true;
-    //   return;
-    // }
-    
-    // const menuItem = this.menu[menuItemIndex];
-    // // console.log(menuItem);
-    // if(e.visible){
-    //   this.currentSelectedItem.active = false;
-    //   this.currentSelectedItem = menuItem;
-    //   menuItem.active = true;
-    //   this.currentSelectedItem.name = menuItem.name;    
-    // }else if(menuItemIndex === 4 && this.currentSelectedItem !== this.menu[0]){
-    //   // this.currentSelectedItem.active = false;
-    //   // this.currentSelectedItem = this.menu[3];
-    //   // this.menu[3].active = true;
-    //   // this.currentSelectedItem.name = this.menu[3].name;    
-    // }
+  changeMenuItem(newIndex) {
+    this.currentSelectedItem.active = false;
+    this.currentSelectedItem = this.menu[newIndex];
+    this.currentSelectedItem.active = true;
+    this.clickedMenu = false;
   }
 
   smoothScroll (menuItem:menu, mobile: boolean) {
     if(menuItem.active)
       return;
-
-    // if(mobile){
-      // if(!this.goingUp)
-        // jump('#'+menuItem.id, { offset: -80})
-      // else 
-        // jump('#'+menuItem.id, { offset: 1000})
-    // }else 
-      jump('#'+menuItem.id, {offset: -50});
-    // else 
-      // jump('#'+menuItem.id)
-      // , {
-        // offset: -50);
+    jump('#'+menuItem.id, {offset: -50});
   }
 
   goToProjects(){
-    if(this.currentSelectedItem === this.menu[3])
-      return;
-    
-    this.currentSelectedItem.active = false;
-    this.currentSelectedItem = this.menu[3];
-    
-    if(window.innerWidth < 1270)
-      this.smoothScroll(this.currentSelectedItem, true);
-    else
-      this.smoothScroll(this.currentSelectedItem, false);
-    this.currentSelectedItem.active = true;
+    this.onMenuClick(this.menu[3], false);
   }
 
   onLogoClick() {
-    if(this.currentSelectedItem === this.menu[0])
-      return;
-    const menuItem = this.menu[0];
-    this.currentSelectedItem.active = false;
-    this.currentSelectedItem = menuItem;
-    if(window.innerWidth < 1270)
-      this.smoothScroll(this.currentSelectedItem, true);
-    else
-      this.smoothScroll(this.currentSelectedItem, false);
-    menuItem.active = true;
-    this.currentSelectedItem.name = menuItem.name; 
+    this.onMenuClick(this.menu[0], false);
   }
 
   bodyClicked(){
-    
-    // console.log('Clicked');
   }
 
 }

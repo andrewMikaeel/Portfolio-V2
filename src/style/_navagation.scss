@@ -10,19 +10,11 @@
     top: 0;
     height: 50px;
     background-color: rgba($color: $background-colour, $alpha: 0.98);
-    // background-image: url('./../assets/concrete-wall.png');
-    // border-bottom: 1px solid darken($color: $background-colour, $amount: 10%); 
-    // box-shadow: 20px 5px 4px 1px rgba(0,0,0,.1);
-    // box-shadow: 1px 20px 20px rgba(0,0,0,.08);
     box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.5);
-    // border: none;
-    background-color: none;
     @supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
         background-color: rgba($color: $background-colour, $alpha: 0.8);
       }
-       transition: all ease-in 10ms;
-    // transition: all 10ms cubic-bezier(.02, .01, .47, 1);
-
+    transition: all ease-in 10ms;
     .menu {
         display: flex;
         align-items: center;
@@ -82,23 +74,16 @@
             
         }
         width: 150px;
-        // width: calc(100vw - 320px);
-        // width: calc(100vw);
         min-width: 170px;
         position: relative;
         left: 0;
-        // padding-right: 20px;
-        text-align: center;
+         text-align: center;
         color: $main-colour;
         color: $font-color;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
-        h1{ 
-            // width: 170px;
-            // margin: 0;
-        }
     }
 }
 .burger{
@@ -140,10 +125,7 @@
     transform: translateX(-100%);
     will-change: transform;
     transition: transform 250ms ease-in-out;
-    background-color: $background-colour;
     background-color: darken($color: $background-colour, $amount: 3%);
-    
-    // background-color: lighten($color: $background-colour, $amount: 5%);
     z-index: 10;
     padding-top: 50px;
     overflow-y: auto;
@@ -181,40 +163,25 @@
             will-change: transform;
             width: 300px;
             a{      
+                font-family: $terminal;
                 display: inline-block;
                 padding-top: 2rem;
                 padding-bottom: 2rem;
                 width: 300px;
-                color: red;
-                 &:hover{ 
-                    background-color: darken($color: $background-colour, $amount: 10%);
-                }
-                // &:active{ background-color: darken($color: $background-colour, $amount: 20%);}
-                &:active{ background-color: rgba($color: $accent-color, $alpha: 0.5); }
                 -webkit-tap-highlight-color: transparent;
                 color: $font-color;
                 text-decoration: none; 
                 outline: none;
                 transition: all ease-in-out 250ms;
-                // &:hover{ color: ; }
+                 &:hover{ 
+                    background-color: darken($color: $background-colour, $amount: 10%);
+                }
+                &:active{ background-color: rgba($color: $accent-color, $alpha: 0.5); }
             }
             .active{
                 color: $accent-color;
-                // transition: all ease-in-out 250ms 150ms; 
-                // a{
-                //     color: $accent-color;
-                // }
-                // &:hover{ 
-                //     a{
-                //     color: $accent-color; 
-                //     color: red;
-                //     }
-                // }
-                // &:active{ background-color: darken($color: $background-colour, $amount: 10%); }
             }
-       
         }
-        
     }
 }
 .nav-active { transform: translateX(0%); }

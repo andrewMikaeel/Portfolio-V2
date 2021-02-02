@@ -112,13 +112,28 @@ export class ProjectsComponent implements OnInit {
       }
       // keyboard: true
     })
+
+    this.mountGlider();
+  }
+  
+  async mountGlider(){
+    await this.move(200);
     this.glide.mount( {
       Controls, 
       Swipe,
       Keyboard,
       Breakpoints
     })
+
   }
+
+  move (duration:number) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('resolved');
+      }, duration);
+    });
+  } 
 
   onClick(direction:string){
     direction === 'R' ? this.glide.go('>') : this.glide.go('<')

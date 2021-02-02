@@ -61,8 +61,6 @@ export class ProjectsLandingComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    // console.log(this.gliderEl.nativeElement);
-    
     this.glide = new Glide(this.gliderEl.nativeElement, {
       perView: 1,
       gap: 0,
@@ -70,28 +68,11 @@ export class ProjectsLandingComponent implements OnInit {
       keyboard: true,
       bound: true,
     })
-    // .mount(
-    //   Controls, 
-    //   Swipe,
-    //   Keyboard
-    //   );
-    // this.glide.mount( {
-    //   Controls, 
-    //   Swipe,
-    //   Keyboard
-    // })
-    // this.glide.mount();
     this.currentProject = this.glide.index;
-    // this.glide.on('move', () => {
-    //   this.currentProject = this.glide.index;
-    //   // console.log(this.currentProject);
-    // });
-
+    
     for(let i = 0; i < this.projects.length; i++)
       this.projectsUI.push(document.getElementById(`proj-${i}`));
-
       requestAnimationFrame(() => this.switchOnInit());
-
   }
 
   async switchOnInit(){
