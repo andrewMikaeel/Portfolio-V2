@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;531&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
+
+// @import "./style/variables";
+// @import './style/_variables.scss';
+$main-font: 'Roboto Slab', serif;
+
+// $background-colour: #e7e7e7;
+// $background-colour: #f1f1f1;
+// $background-colour: #fff;
+// $main-colour: #525050;
+// $main-colour: #555656;
+// $overlay-colour: rgba($color: #807d7d, $alpha: 0.5);
+// $overlay-colour: #807d7d;
+// $accent-color: #f76161;
+// $accent-color: #6170f7;
+// $accent-color: #F36662;
+// $secondary-colour: darken($color: $main-colour, $amount: 100%);
+
+
+
+
+
+
+@import "./style/variables";
+@import "./style/reset";
+@import "./style/navagation";
+@import "./style/landing";
+@import "./style/mainContent";
+@import "./style/programming";
+@import "./style/media/height.scss";
+@import "./style/media/width.scss";
+@import "./style/reusable";

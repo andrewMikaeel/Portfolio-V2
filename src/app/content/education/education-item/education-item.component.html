@@ -1,0 +1,16 @@
+<div class="education-item" [ngClass]="{ educationItemSelected: education[educationId].selected}">
+    <div class="header" (click) ="onClick()" >
+        <h3><a>{{ education[educationId].header}}</a> </h3>
+        <fa-icon [icon]="education[educationId].icon" class="icon"></fa-icon>
+    </div>
+    <div class="education-content" [id]="educationId">
+        <div class="education-item-text">
+            <p>{{ education[educationId].description }}</p>
+            <ul *ngIf="education[educationId].points">
+                <div class="points" *ngFor="let point of education[educationId].points">
+                    <li>{{ point }}</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>

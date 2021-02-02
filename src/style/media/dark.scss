@@ -1,0 +1,51 @@
+@media (prefers-color-scheme: light) {
+    $background-colour: #525050;
+    $main-colour: #afaeae;
+    $overlay-colour: #636262;
+    $accent-color: #f76161;
+    $secondary-colour: lighten($color: $main-colour, $amount: 100%);
+    
+    body{ background-color: $background-colour}
+    .nav{ 
+        background-color: rgba($color: $background-colour, $alpha: 0.97);
+        border-bottom: 1px solid lighten($color: $background-colour, $amount: 10%);
+        @supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
+            background-color: rgba($color: $background-colour, $alpha: 0.8);
+          }
+    }
+    .burger{
+        &:hover > div { background-color: $secondary-colour; }
+        div{ background-color: $main-colour; }
+    }
+    .logo{
+        h1 { color: $main-colour;}
+    }
+
+    .app-side-bar{
+        background-color: darken($color: $background-colour, $amount: 3%);
+        color: $main-colour;
+        .nav-links {
+            a{ 
+                color: $main-colour;
+                &:hover{ 
+                    color: $secondary-colour; 
+                    background-color: lighten($color: $background-colour, $amount: 5%);
+                }
+                // &:active{background-color: lighten($color: $background-colour, $amount: 20%);}
+                &:active{ background-color: rgba($color: $accent-color, $alpha: 0.65); }
+            }
+            .active{
+                &:active{ background-color: lighten($color: $background-colour, $amount: 10%); }
+            }
+        }
+    }
+    .overlay{ 
+        background-color: $overlay-colour;
+        border-color: lighten($color: $overlay-colour, $amount: 5%);
+    }
+    .content{
+        background-color: rgba($color: $background-colour, $alpha: 0.97);
+        color: $main-colour;
+        
+    }
+}

@@ -1,0 +1,25 @@
+<div class="section education">
+    <div class="section-header">
+        <div class="hat">
+            <fa-icon [icon]="graduation" class="icon"></fa-icon>
+        </div>
+        <h2>EDUCATION</h2>
+    </div>
+    <div class="content" #educationTemplateItems>
+        <app-education-item  
+        *ngFor="let educationItem of educationItems" 
+        [educationId]="educationItem.id" 
+        [education]="educationItems"
+        (educationSelected)="changeItem($event)">
+    </app-education-item>
+    </div>
+</div>
+
+<div class="section skills">
+    <div class="section-header">
+        <h2>Skills</h2>
+    </div>
+    <div class="content">
+        <app-skills></app-skills>
+    </div>
+</div>

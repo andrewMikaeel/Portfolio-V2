@@ -1,0 +1,92 @@
+  <div class="landing">
+      <div class="message landing-card" (mouseenter)="onHover($event, 'M')" (click)="onCardClick($event, 'M')" (mouseleave)="onCardHoverLeave($event, 'M')"  #texts>
+        <div class="phone-top">
+          <fa-icon [icon]="arrowLeft" class="icon"></fa-icon>
+          <div class="profile">
+            <p>AM</p>
+          </div>
+          <fa-icon [icon]="arrowLeft" class="icon icon2"></fa-icon>
+        </div>
+        <div class="iphone-top-bar"></div>
+        <div class="main-phone">
+          <div class="texts">
+            <div class="text">
+              <h2>Hey!</h2>
+            </div>
+            <div class="text">
+              <h2>I'm Andrew 👋</h2> 
+            </div>
+            <div class="text">
+              <h2>I'm a Web Developer</h2>
+            </div>
+            <div class="text">
+              <h2>Take a look at some of my work</h2>
+            </div>
+            <div class="typing-indicator" #typing>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="bottom">
+            <fa-icon [icon]="camera" class="icon"></fa-icon>
+            <div class="appStore"><fa-icon [icon]="appStore" class="icon"></fa-icon></div>
+            <div class="input">
+              <p>Message</p>
+              <div class="arrowUpContainer">
+                <fa-icon [icon]="arrowUp" class="icon"></fa-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    <div class="landing-slider landing-card" (mouseenter)="onHover($event, 'P')" (click)="onCardClick($event, 'P')" (mouseleave)="onCardHoverLeave($event, 'P')" #myProjects>
+      <div class="glide" #glide>
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides slider" >
+            <li class="glide__slide project" *ngFor="let project of projects; let i = index;">
+              <div class="project-wrapper" (mouseenter)="onHoverProject(i)" (mouseleave)="onMouseLeaveProject(i)" id="proj-{{i}}">
+                <img class="gif" src="{{project}}"   alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows arrows">
+            <button class="glide__arrow glide__arrow--left arrow" data-glide-dir="<" (click)="onClick('L')"><mat-icon aria-hidden="false" class="arrow-icon">west</mat-icon></button>
+            <button class="glide__arrow glide__arrow--right arrow" data-glide-dir=">" (click)="onClick('R')"><mat-icon aria-hidden="false" class="arrow-icon">east</mat-icon></button>
+      </div>
+      </div>
+      <div class="btn-wrapper">
+          <button class="btn" (click)="onSeeProjects()"><p>See Projects</p></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="nav">
+  <div class="logo" (click)="onLogoClick()">
+      <h1>Insightful Strategies</h1>
+  </div>
+  <div class="menu">
+      <ul class="menu-items">
+          <li *ngFor="let menuItem of menu;" (click)="onMenuClick(menuItem, $event, false)" [ngClass]="{'active': menuItem.active, 'noSelect': true}">{{ menuItem.name }}
+            <a href="#{{menuItem.name}}" ></a>
+          </li>
+        </ul>
+  </div>
+</div>
+<div class="burger" (click)="toggle()" [ngClass]="{'toggle': navActive}">
+  <div class="line1"></div>
+  <div class="line2"></div>
+</div>
+<div class="app-side-bar" [ngClass]="{'nav-active': navActive}">
+  <div class="profile" #profile>
+    <h3>Insightful Strategies</h3>
+  </div>
+  <ul class="nav-links" #navLinks>
+    <li *ngFor="let menuItem of menu">
+      <a href="#" [ngClass]="{'active': menuItem.active, 'noSelect': true}" (click)="onMenuClick(menuItem, $event, true)">{{ menuItem.name }}</a></li>
+  </ul>
+</div>
+<div class="overlay" (click)="overlayClick()" [ngClass]="{'opacity': navActive}" *ngIf="navActive"></div>
+<div class="blur"></div> -->

@@ -1,0 +1,220 @@
+.nav{
+    color: $main-colour;
+    font-family: $main-font;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 50px;
+    background-color: rgba($color: $background-colour, $alpha: 0.98);
+    // background-image: url('./../assets/concrete-wall.png');
+    // border-bottom: 1px solid darken($color: $background-colour, $amount: 10%); 
+    // box-shadow: 20px 5px 4px 1px rgba(0,0,0,.1);
+    // box-shadow: 1px 20px 20px rgba(0,0,0,.08);
+    box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.5);
+    // border: none;
+    background-color: none;
+    @supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
+        background-color: rgba($color: $background-colour, $alpha: 0.8);
+      }
+       transition: all ease-in 10ms;
+    // transition: all 10ms cubic-bezier(.02, .01, .47, 1);
+
+    .menu {
+        display: flex;
+        align-items: center;
+        .menu-items{
+            display: flex;
+            justify-content: space-between;
+            &:hover { cursor: pointer;}
+            
+            li{
+                margin-right: 30px;
+                color: $font-color;
+                transition: color 250ms ease-in-out;
+                a{
+                     &::after{
+                        content: "";
+                        display: block;
+                        border-bottom: 2px solid $font-color;
+                        transform: scale(0);
+                        transition: transform 200ms ease-out;
+                    }
+                }
+                &:hover {
+                    a::after{ transform: scaleX(1); }
+                }
+            }
+            .active{
+                color: $accent-color;
+                a{
+                    &::after{
+                    content: "";
+                    display: block;
+                    border-bottom: 2px solid $accent-color;
+                    transform: scale(1);
+                    transition: transform 250ms ease-out;
+                }
+                }
+            }
+        }
+    }
+    
+    .logo{
+        margin-right: 60px;
+        :hover{
+            cursor: pointer;
+        }
+        h1{
+            color: $font-color;
+            padding-right: 0;
+            width: 10px;
+            width: 170px;
+            margin: 0;
+            font-size: 1rem;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            
+        }
+        width: 150px;
+        // width: calc(100vw - 320px);
+        // width: calc(100vw);
+        min-width: 170px;
+        position: relative;
+        left: 0;
+        // padding-right: 20px;
+        text-align: center;
+        color: $main-colour;
+        color: $font-color;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1{ 
+            // width: 170px;
+            // margin: 0;
+        }
+    }
+}
+.burger{
+    display: none;
+    -webkit-tap-highlight-color: transparent;
+    position: fixed;
+    margin: 0;
+    top: 19.5px;
+    left: 20px;
+    height: 11px;
+    width: 25px;
+    transition: transform 1s ease-in-out;
+    z-index: 11;
+    &:hover > div { background-color: darken($color: $font-color, $amount: 20) }
+    cursor: pointer;
+    div {
+        width: 25px;
+        height: 3px;
+        background-color: $font-color;
+        // background-color: rgba($color: $main-colour, $alpha: 0.1);
+        margin-bottom: 5px;
+        transition: all ease-in-out 250ms;
+    }
+    div:last-child{ margin-bottom: 0;}
+}
+.toggle{
+    .line1 { transform: translateY(4px) rotate(-45deg); }
+    .line2 { transform: translateY(-4px) rotate(45deg); }
+}
+
+.app-side-bar{
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    height: 100%;
+    transform: translateX(-100%);
+    will-change: transform;
+    transition: transform 250ms ease-in-out;
+    background-color: $background-colour;
+    background-color: darken($color: $background-colour, $amount: 3%);
+    
+    // background-color: lighten($color: $background-colour, $amount: 5%);
+    z-index: 10;
+    padding-top: 50px;
+    overflow-y: auto;
+    .profile{
+        align-self: center;
+        opacity: 0;
+        will-change: opacity;
+        .profile-img{
+            width: 8rem;
+            border-radius: 5%;
+            margin-bottom: 0.5rem;
+        }
+        h3{
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 0.2rem;
+            color: $font-color;
+        }
+        p{
+            margin-bottom: 1rem;
+            font-weight: 400;
+            color: $accent-color;
+        }
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        padding: 1rem 4rem;
+        li{
+            opacity: 0;
+            will-change: opacity;
+            will-change: transform;
+            width: 300px;
+            a{      
+                display: inline-block;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                width: 300px;
+                color: red;
+                 &:hover{ 
+                    background-color: darken($color: $background-colour, $amount: 10%);
+                }
+                // &:active{ background-color: darken($color: $background-colour, $amount: 20%);}
+                &:active{ background-color: rgba($color: $accent-color, $alpha: 0.5); }
+                -webkit-tap-highlight-color: transparent;
+                color: $font-color;
+                text-decoration: none; 
+                outline: none;
+                transition: all ease-in-out 250ms;
+                // &:hover{ color: ; }
+            }
+            .active{
+                color: $accent-color;
+                // transition: all ease-in-out 250ms 150ms; 
+                // a{
+                //     color: $accent-color;
+                // }
+                // &:hover{ 
+                //     a{
+                //     color: $accent-color; 
+                //     color: red;
+                //     }
+                // }
+                // &:active{ background-color: darken($color: $background-colour, $amount: 10%); }
+            }
+       
+        }
+        
+    }
+}
+.nav-active { transform: translateX(0%); }

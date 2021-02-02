@@ -1,0 +1,50 @@
+<div class="section projects">
+    <div class="section-header">
+        <h2>Projetcs</h2>
+    </div>
+    <div class="content">
+        <div class="project-container">
+            
+             <div class="project-cards" #projectsContainer >
+                <div class="card">
+                </div>
+                <div class="card selected-card">
+                    <h3 class="project-title">Design Must Lead the Way on Artificial Intelligence and Machine Learning</h3>
+                    <p class="project-description">Artificial intelligence and machine learning technology are all around us...</p>
+                    <div class="project-img"></div>
+                    <img src="./../../../assets/code.jpg" alt="">
+                    <div class="line"></div>
+                    <p class="project-category">Process</p>
+                </div>
+                <div class="card" *ngFor="let item of items; let i = index" id="card-{{i}}">
+                    <h3 class="project-title">Design Must Lead the Way on Artificial Intelligence and Machine Learning</h3>
+                    <p class="project-description">Artificial intelligence and machine learning technology are all around us...</p>
+                    <img src="./../../../assets/Logo.png" alt="">
+                    <div class="line"></div>
+                    <p class="project-category">Process</p>
+                </div>
+                <div class="card">
+                </div>
+            </div> 
+            <div class="carousel-container">
+                <div class="glide" #glide>
+                  <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides carousel" >
+                      <li class="glide__slide card" *ngFor="let project of projects; let i = index;">
+                        <h3 class="project-title">Design Must Lead the Way on Artificial Intelligence and Machine Learning</h3>
+                        <p class="project-description">Artificial intelligence and machine learning technology are all around us...</p>
+                        <img src="./../../../assets/Logo.png" alt="">
+                        <div class="line"></div>
+                        <p class="project-category">Process</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="glide__arrows arrows">
+                    <button class="glide__arrow glide__arrow--left arrow" data-glide-dir="<" (click)="onClick('L')"><mat-icon aria-hidden="false" class="arrow-icon">west</mat-icon></button>
+                    <button class="glide__arrow glide__arrow--right arrow" data-glide-dir=">" (click)="onClick('R')"><mat-icon aria-hidden="false" class="arrow-icon">east</mat-icon></button>
+              </div>
+                </div>
+            </div>
+              
+    </div>
+</div>

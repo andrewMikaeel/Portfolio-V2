@@ -1,0 +1,27 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;531&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+$main-font: 'Roboto Slab', serif;
+$main-font: 'Inconsolata', monospace;
+$terminal: 'Inconsolata', monospace;
+$buissnessCard: 'EB Garamond', serif;
+// $background-colour: #e7e7e7;
+// $background-colour: #f1f1f1;
+// #2d333b 
+$background-colour: #343b44;
+$background-colour: #434c58;
+// $background-colour: #fff;
+// $main-colour: #525050;
+$main-colour: #555656;
+$terminal-colour: #7af94f;
+$overlay-colour: rgba($color: #807d7d, $alpha: 0.5);
+$overlay-colour: #807d7d;
+// $accent-color: #f76161;
+// $accent-color: #6170f7;
+$accent-color: #F36662;
+$accent-color: #0b81fd;
+$secondary-colour: darken($color: $main-colour, $amount: 100%);
+$font-color: rgb(170, 169, 169);
+$font-color: #fff;

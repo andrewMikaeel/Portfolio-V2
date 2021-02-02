@@ -1,0 +1,130 @@
+// HEIGHT
+@media(max-height: 820px) {
+    .landing {
+        .landing-slider{
+            height: 550px;
+            width: 350px;
+            .project {
+                height: 300px;
+                .project-wrapper{
+                    .gif {
+                        width: 250px;
+                        height: 250PX;
+                    }
+                }
+            }
+        }
+        .message {
+            height: 550px;
+            width: 350px;
+            .main-phone {
+                height: 480px;
+                .texts {
+                    .typing-indicator {
+                         top: 340px;   
+                         left: 25px;
+                    }
+                }
+            }
+            .iphone-top-bar {
+                width: 350px;
+            }
+        }
+    }
+}
+
+
+@media(max-height: 580px){
+    .nav{
+        position: fixed;
+    }
+    .app-side-bar{
+        padding-top: 50px;
+        .profile {
+            margin-bottom: 0;
+            p{ margin-bottom: 0rem;}
+        }
+        .nav-links a{
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+    .main-content{
+        // .projects {
+        //     // height: 500px;
+        //     .section-header {
+        //         margin-left: 1rem;
+        //         margin-right: 1rem;
+        //         margin-bottom: 0;
+        //     }
+        //     .content {
+        //         .project-container{
+        //             // display: flex;
+        //             // justify-content: center;
+        //             // align-items: center;
+        //             // height: 300px;
+
+        //             // transform: scale(0.5);
+        //             .project-cards{
+        //                 height: 400px;
+        //                 // width: 355px;
+        //                 // justify-content: center;
+        //                 // transform: scale(0.5);
+        //                 justify-items: center;
+        //                 scroll-snap-type: x mandatory;
+        //                 // -webkit-overflow-scrolling: touch;
+        //                 column-gap: 0px;
+        //                 row-gap: 0;
+                        
+        //                 .card {
+        //                     transform: scale(0.5);
+        //                     scroll-snap-align: center;
+        //                     &:hover {
+        //                         transform: scale(0.5);
+        //                         box-shadow: 0 30px 30px rgba(0,0,0,.16);
+        //                     }
+        //                     &:last-child {
+        //                         // display: none;
+        //                         border: none;
+        //                         padding: 0;
+        //                         height: 1px;
+        //                         width: 1px;
+        //                     }
+        //                     &:first-child {
+        //                         display: none;
+        //                         // grid-column-start: 7;
+        //                     }
+        //                     &:last-child {
+        //                         // grid-column-start: 2;
+        //                     }
+        //                 }
+        //                 .selected-card {
+        //                     transform: scale(0.5);
+        //                     box-shadow: 0 30px 30px rgba(0,0,0,.16);
+        //                 }
+        //             }
+                    
+        //         }
+        //     }
+        // }
+    }
+    
+}
+
+@media(max-height: 375px){
+    .app-side-bar{
+        overflow: auto;
+        .profile{
+            display: none;
+        }
+        .nav-links{
+            padding:0 ;
+            a{
+                padding-top: 1.25rem;
+                padding-bottom: 1.25rem;
+            }
+        }
+    }
+
+   
+}

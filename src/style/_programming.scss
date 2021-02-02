@@ -1,0 +1,320 @@
+.about {
+    .content{
+        .programming {
+            // width: 300px;
+            height: 375px;
+            // box-shadow: 1px 20px 20px rgba(0,0,0,.5);
+            border-radius: 20px;
+            background-color: darken($color: $background-colour, $amount: 10) ;
+            // transform: rotate3d(.5,-.866,0,15deg) rotate(-1deg);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            .line {
+                display: flex;
+                $blue: rgb(57, 57, 231);
+                $red: rgb(180, 57, 57);
+                $green: rgb(31, 134, 31);
+                $purple: rgb(116, 27, 116);
+                $yellow: rgb(163, 163, 22);
+                $turquoise: rgb(38, 145, 113);
+                $beige: rgb(145, 117, 38);
+                .code {
+                    border-radius: 3px;
+                    height: 15px;
+                    transform-origin: 0% 50%;
+                    transform: scaleX(0);
+                    animation: animateCode 50ms ease-in-out 0ms 1 forwards;
+                    margin-right: 10px;   
+                }
+                &:first-child {
+                    .code {
+                        &:first-child {
+
+                            width: 20%;
+                            background-color: $red;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2){
+                            width: 25%;
+                            background-color: $blue;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3){
+                            transform: scaleX(0);
+                            width: 10%;
+                            background-color: $green;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    margin-left: 30px;
+                    .code{
+                        margin-top: 15px;
+                        &:first-child {
+                            width: 15%;
+                            background-color: $purple;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 8%;
+                            background-color: $yellow;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 18%;
+                            background-color: $turquoise;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(4) {
+                            width: 6%;
+                            background-color: $red;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(5) {
+                            animation-delay: 1750ms;
+                            width: 7%;
+                            background-color: $blue
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    margin-left: 60px;
+                    .code{
+                        margin-top: 15px;
+                        &:first-child {
+                            width: 10%;
+                            background-color: $blue;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 20%;
+                             background-color: $green;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 8%;
+                            background-color: $red;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(4) {
+                            width: 15%;
+                            background-color: $yellow;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(5) {
+                            width: 7%;
+                            background-color: $purple;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(6) {
+                            width: 12%;
+                            background-color: $turquoise;
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    margin-left: 60px;
+                    .code{
+                        margin-top: 15px;
+                        &:first-child {
+                            width: 7%;
+                            background-color: $turquoise;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 15%;
+                            background-color: $yellow;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 8%;
+                            
+                            background-color: $blue;
+                            // margin-right: 5px;
+                        }
+                    }
+                }
+                &:nth-child(5) {
+                    margin-left: 30px;
+                    .code{
+                        margin-top: 15px;
+                        &:first-child {
+                            width: 10%;
+                            background-color: $green;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 20%;
+                            background-color: $red;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 8%;
+                            background-color: $purple;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(4) {
+                            width: 15%;
+                            
+                            background-color: $yellow;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(5) {
+                            width: 17%;
+                            background-color: $blue;
+                            // margin-right: 5px;
+                        }
+                    }
+                }
+                &:nth-child(6) {
+                    .code{
+                        margin-top: 45px;
+                        &:first-child {
+                            width: 10%;
+                            background-color: $yellow;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 20%;
+                            background-color: $blue;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 15%;
+                            background-color: $turquoise;
+                            // margin-right: 5px;
+                        }
+                    }
+                }
+
+                &:nth-child(7) {
+                    margin-left: 30px;
+                    .code{
+                        margin-top: 15px;
+                        &:first-child {
+                            width: 12%;
+                            
+                            background-color: $purple;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 25%;
+                            background-color: $yellow;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 12%;
+                            background-color: $red;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(4) {
+                            width: 8%;
+                            background-color: $blue;
+                            // margin-right: 5px;
+                        }
+                    }
+                }
+                &:nth-child(8) {
+                    margin-left: 60px;
+                    .code{
+                        margin-top: 15px;
+                        &:first-child {
+                            width: 10%;
+                            background-color: $red;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 25%;
+                            background-color: $green;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 12%;
+                            background-color: $purple;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(4) {
+                            width: 8%;
+                            background-color: $turquoise;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(5) {
+                            width: 8%;
+                            background-color: $beige;
+                            // margin-right: 5px;
+                        }
+                    }
+                }
+                &:nth-child(9) {
+                    margin-left: 60px;
+                    .code{
+                        margin-top: 15px;
+                        &:first-child {
+                            width: 17%;
+                            background-color: $beige;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 25%;
+                            
+                            background-color: $turquoise;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 12%;
+                            background-color: $yellow;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(4) {
+                            width: 8%;
+                            background-color: $green;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(5) {
+                            width: 8%;
+                            background-color: $red;
+                            // margin-right: 5px;
+                        }
+                    }
+                }
+                &:nth-child(10) {
+                    margin-left: 30px;
+                    .code{
+                        margin-top: 15px;
+                        &:first-child {
+                            width: 17%;
+                            background-color: $blue;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 25%;
+                            
+                            background-color: $green;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 12%;
+                            background-color: $beige;
+                            // margin-right: 5px;
+                        }
+                        &:nth-child(4) {
+                            width: 8%;
+                            background-color: $red;
+                            // margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animateCode {
+    from {
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}

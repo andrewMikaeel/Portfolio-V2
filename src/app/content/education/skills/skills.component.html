@@ -1,0 +1,53 @@
+<div class="skills-subcategory subsection">
+    <div class="subsection-header">
+        <h3>I Specialize In </h3>
+    </div>
+    <div class="skills-specialize">
+        <div class="iconContainer"  #iconContainer1>
+            <fa-icon [icon]="angular" class="icon Angular"></fa-icon>
+            <p>Angular</p>
+        </div>
+        <div class="iconContainer" #iconContainer2>
+            <fa-icon [icon]="javascript" class="icon JavaScript"></fa-icon>
+            <p>JavaScript</p>
+        </div>
+        
+        <div class="iconContainer" #iconContainer3>
+            <fa-icon [icon]="html" class="icon HTML5"></fa-icon>
+            <div><p>HTML5</p></div>
+        </div>
+        <div class="iconContainer" #iconContainer4>
+            <fa-icon [icon]="css" class="icon CSS3"></fa-icon>
+            <p>CSS3</p>
+        </div>
+    </div>
+</div>
+
+<div class="skills-subcategory subsection">
+    <div class="subsection-header">
+        <h3>All Skills</h3>
+  </div>
+    <div class="skills-other">
+
+  
+        <div class="canvas-container">
+            <div class="canvas">
+              <div class="circle-container" *ngFor="let ball of numBalls; index as i" id="ball-{{i}}" >
+                <div class="container" id="{{i}}">
+                  <div class="circle">
+                    <fa-icon [icon]="ball.icon" ngClass="icon {{ball.name}}">{{ball.icon}}</fa-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="legend">
+            <div class="legend-container"  *ngFor="let icon of icons">
+                <div class="icon-container">
+                    <fa-icon [icon]="icon.icon" ngClass="icon {{icon.name}}">{{icon.icon}}</fa-icon>
+                </div>
+                <p>{{icon.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>
