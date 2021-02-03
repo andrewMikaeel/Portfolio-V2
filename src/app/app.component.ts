@@ -6,6 +6,8 @@ interface menu {
   active: boolean,
   id: string,
   inViewPort: boolean,
+  link:string,
+  target:string,
   index: number
 }
 
@@ -38,13 +40,14 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   ngOnInit() {
     this.menu = [
-      { name: 'Home', active: false, id: 'home', inViewPort: false, index: 0},
-      { name: 'About', active: false, id: 'about', inViewPort: false, index: 1},
-      { name: 'Education & Skills', active: false, id: 'education', inViewPort: false, index: 2},
-      { name: 'Projects', active: false, id: 'projects', inViewPort: false, index: 3},
-      { name: 'Contact', active: false, id: 'contact', inViewPort: false, index: 4},
-      { name: 'Résumé', active: false, id: 'resume', inViewPort: false, index: 5},
-      { name: 'GitHub', active: false, id: 'github', inViewPort: false, index: 6},
+      { name: 'Home', active: false, id: 'home', inViewPort: false, index: 0, link: '#', target: ''},
+      { name: 'About', active: false, id: 'about', inViewPort: false, index: 1, link: '#about', target: ''},
+      { name: 'Education & Skills', active: false, id: 'education', inViewPort: false, index: 2, link: '#education', target: ''},
+      { name: 'Projects', active: false, id: 'projects', inViewPort: false, index: 3, link: '#projects', target: ''},
+      { name: 'Contact', active: false, id: 'contact', inViewPort: false, index: 4, link: '#contact', target: ''},
+      { name: 'Résumé', active: false, id: 'resume', inViewPort: false, index: 5, link: '', target: ''},
+      { name: 'GitHub', active: false, id: 'github', inViewPort: false, index: 6, link: 'https://github.com/mikandrew53/', target: '_blank'},
+      { name: 'Linkedin', active: false, id: 'linkedin', inViewPort: false, index: 6, link: 'https://www.linkedin.com/in/andrew-mikaeel-171234141/', target: '_blank'}
     ]
     this.currentSelectedItem = this.menu[0];
   }
@@ -85,6 +88,11 @@ export class AppComponent implements OnInit, AfterViewInit{
   }
 
   onMenuClick(menuItem: menu, mobile: boolean){
+    if(menuItem.index === 5 || menuItem.index === 6) {
+      window.open(menuItem.link, '_blank');
+      return;
+    }
+
     this.clickedMenu = true;
 
     if(menuItem.index > this.currentSelectedItem.index){

@@ -5,8 +5,8 @@
   </div>
   <div class="menu">
       <ul class="menu-items">
-          <li *ngFor="let menuItem of menu;" (click)="onMenuClick(menuItem, $event, false)" [ngClass]="{'active': menuItem.active, 'noSelect': true}">{{ menuItem.name }}
-            <a href="#{{menuItem.name}}" ></a>
+        <li *ngFor="let menuItem of menu;" (click)="onMenuClick(menuItem, $event, false)" [ngClass]="{'active': menuItem.active, 'noSelect': true}">
+        <a href="#" >{{ menuItem.name }}</a>
           </li>
         </ul>
   </div>
@@ -43,7 +43,6 @@
     [inViewportOptions]="{ threshold: [0] }"
     (inViewportAction)="inViewPort(1, $event)"> 
   </app-about>
-  <!-- <app-about></app-about> -->
   <app-education 
     id="education"
     inViewport
@@ -51,8 +50,6 @@
     (inViewportAction)="inViewPort(2, $event)"
   >
   </app-education>
-  <!-- <app-education></app-education> -->
-  
   <app-projects 
     id="projects"
     inViewport
@@ -68,6 +65,4 @@
     (inViewportAction)="inViewPort(4, $event)"
   >
   </app-contact>
-
-  <!-- <app-contact></app-contact> -->
 </div>

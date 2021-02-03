@@ -131,7 +131,7 @@
                         // word-spacing: 0.75rem;
                         // letter-spacing: 0.2rem;
                     }
-                    &:hover{
+                    &:hover, &:focus{
                         cursor: pointer;
                         background-color: darken($color: $background-colour, $amount: 5%);
                         transition: background-color 300ms linear;
@@ -657,6 +657,7 @@
                 background-color: #898a87;
                 background-image: url('./../assets/concrete-wall.png');
                 // border-radius: 20px;
+
                 width: 600px;
                 height: 300px;
                 box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.5);
@@ -668,12 +669,15 @@
                 animation-iteration-count: infinite;
                 animation-duration: 4s;
                 animation-timing-function: ease-in-out;
-        h3{
-            font-family: $buissnessCard;
-            color: #302d28;
-            color: #292522;
-            font-weight: 600;
-        }
+                display: flex;
+                justify-content: space-between;
+                h3{
+                    font-family: $buissnessCard;
+                    color: #302d28;
+                    color: #292522;
+                    font-weight: 600;
+                    max-height: 20px;
+                }
                 .top {
                     display: flex;
                     justify-content: space-between;
@@ -689,32 +693,50 @@
                 .middle{
                     display: flex;
                     justify-content: center;
-
-                    // justify-self: center;
+                    transform: translateY(-5px);
                     h3{
                         margin: 0;
                         text-align: center;
                         
                     }
-                    // margin-top: auto;
-                    // margin-bottom: auto;
-                    position: absolute;
-                    top: 120px;
-                    left: 207px;
                 }
 
                 .bottom {
-                    position: absolute;
-                    bottom: 20px;
                     display: flex;
                     justify-content: space-between;
-                    width: 560px;
+                    align-items: flex-end;
+                    height: fit-content;
                     // width: 100%;
                     .social {
                         display: flex;
+                        height: fit-content;
+                        a{
+                            color: darken($color:  $accent-color, $amount: 25);
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                            &:hover{
+                                color: #292522;
+                                color: lighten($color:  #292522, $amount: 15);
+                            }
+                        }
                     }
-                    h3{
+                    a{
+                       
+                        font-family: $buissnessCard;
+                        color: #292522;
+                        
+                        font-weight: 600;
+                        height: fit-content;
                         margin: 0 10px 0 0;
+                        transition: 250ms color ease-in-out;
+                        &:hover{
+                            // &::after{ transform: scaleX(1); }
+                            color: #292522;
+                            // color: lighten($color: #292522, $amount: 10);
+                            // color: darken($color: $accent-color, $amount: 10);
+                            // color: $accent-color;
+                        }
                     }
                 }
             }

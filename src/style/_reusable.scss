@@ -92,12 +92,12 @@
         margin: 0;
 
     }
-    &:hover {
+    &:hover, &:focus {
+        outline: none;
         cursor: pointer;
         background-color: darken($color: $accent-color, $amount: 2);
         transform: scale(1.1);
     }
-    &:focus{ outline: none; }
 }
 
 @keyframes navLinkFade {
@@ -156,7 +156,7 @@
             transform: scale(1.3);
             color: $accent-color;
         }
-        &:hover{
+        &:hover, &:focus{
             transform: scale(1.1);
             cursor: pointer;
             box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.2);

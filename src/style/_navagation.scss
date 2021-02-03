@@ -25,9 +25,9 @@
             
             li{
                 margin-right: 30px;
-                color: $font-color;
-                transition: color 250ms ease-in-out;
                 a{
+                    color: $font-color;
+                    transition: color 250ms ease-in-out;
                      &::after{
                         content: "";
                         display: block;
@@ -35,14 +35,16 @@
                         transform: scale(0);
                         transition: transform 200ms ease-out;
                     }
+
+                    &:focus {outline: none;}
                 }
                 &:hover {
                     a::after{ transform: scaleX(1); }
                 }
             }
             .active{
-                color: $accent-color;
                 a{
+                    color: $accent-color;
                     &::after{
                     content: "";
                     display: block;
@@ -101,7 +103,7 @@
     cursor: pointer;
     div {
         width: 25px;
-        height: 3px;
+        height: 1px;
         background-color: $font-color;
         // background-color: rgba($color: $main-colour, $alpha: 0.1);
         margin-bottom: 5px;
@@ -110,8 +112,8 @@
     div:last-child{ margin-bottom: 0;}
 }
 .toggle{
-    .line1 { transform: translateY(4px) rotate(-45deg); }
-    .line2 { transform: translateY(-4px) rotate(45deg); }
+    .line1 { transform: translateY(3px) rotate(-45deg); }
+    .line2 { transform: translateY(-3px) rotate(45deg); }
 }
 
 .app-side-bar{
