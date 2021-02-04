@@ -155,24 +155,6 @@
         transform: scale(1.1);
     }
 }
-
-@keyframes navLinkFade {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes floating {
-    from {transform: translateY(0px) }
-    65% {transform: translateY(15px) }
-    to {transform: translateY(0px) }
-}
-// box-shadow: 0 20px 20px rgba(0,0,0,.08);
 .opacity{
     opacity: 0.5;
 }
@@ -219,5 +201,52 @@
             box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.2);
         }
         &:focus{ outline: none;}
+    }
+}
+
+@keyframes navLinkFade {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes floating {
+    from {transform: translateY(0px) }
+    65% {transform: translateY(15px) }
+    to {transform: translateY(0px) }
+}
+
+
+.hide{
+    opacity: 0;
+}
+
+.show{
+    animation: show 500ms ease-in-out 0 1 forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes comingInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }to {
+        opacity: 1;
+        transform: translateX(-100%);
     }
 }

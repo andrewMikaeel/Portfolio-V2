@@ -3,7 +3,11 @@
         <h2>About Me</h2>
     </div>
     <div class="content">
-        <div class="programming" #programming>    
+        <div class="programming" #programming
+        inViewport
+        [inViewportOptions]="{ threshold: [0] }"
+        (inViewportAction)="animate($event)"
+        >    
             <div class="line">
                 <div class="code"></div>
                 <div class="code"></div>
@@ -71,7 +75,6 @@
         <div class="description">
             <p>TERMINAL</p>
             <p>Hi, I'm Andrew, I am a software engineering student, interested in the front end side of the web. I am most intersted in building beautiful and elegant web applications. </p>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa quae, similique placeat optio magnam ea commodi accusantium id et sed aliquid doloremque repellendus ipsum? Rem mollitia voluptatem assumenda, laboriosam, repellat vero similique officia eos vitae quasi, tenetur illum nobis in!</p> -->
         </div>
     </div>
 </div>
