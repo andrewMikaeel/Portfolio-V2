@@ -101,13 +101,26 @@ export class ProjectsComponent implements OnInit {
       perView: 3,
       gap: 10,
       bound: true,
-      rewind: false,
+      rewind: true,
       breakpoints: {
+        peek: {
+          before: 100, 
+          after: 100 ,
+        },
         700: {
-          perView: 1
+          perView: 1,
+          peek: {
+            before: 0, 
+            after: 5 ,
+          },
+
         },
         1000: {
-          perView: 2
+          perView: 2,
+          peek: {
+            before: 50, 
+            after: 50 ,
+          },
         }
       }
       // keyboard: true
