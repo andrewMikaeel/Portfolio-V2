@@ -1,22 +1,26 @@
 <div class="skills-subcategory subsection">
-    <div class="subsection-header">
+    <div class="subsection-header hide" [ngClass]="{'show': show}">
         <h3>I Specialize In </h3>
     </div>
-    <div class="skills-specialize">
-        <div class="iconContainer"  #iconContainer1>
+    <div class="skills-specialize"
+    inViewport
+    [inViewportOptions]="{ threshold: [0] }"
+    (inViewportAction)="onView($event)"
+    >
+        <div class="iconContainer hide"  #iconContainer1 [ngClass]="{'show': show}">
             <fa-icon [icon]="angular" class="icon Angular"></fa-icon>
             <p>Angular</p>
         </div>
-        <div class="iconContainer" #iconContainer2>
+        <div class="iconContainer hide" #iconContainer2 [ngClass]="{'show': show}">
             <fa-icon [icon]="javascript" class="icon JavaScript"></fa-icon>
             <p>JavaScript</p>
         </div>
         
-        <div class="iconContainer" #iconContainer3>
+        <div class="iconContainer hide" #iconContainer3 [ngClass]="{'show': show}">
             <fa-icon [icon]="html" class="icon HTML5"></fa-icon>
             <div><p>HTML5</p></div>
         </div>
-        <div class="iconContainer" #iconContainer4>
+        <div class="iconContainer hide" #iconContainer4 [ngClass]="{'show': show}">
             <fa-icon [icon]="css" class="icon CSS3"></fa-icon>
             <p>CSS3</p>
         </div>
@@ -24,12 +28,10 @@
 </div>
 
 <div class="skills-subcategory subsection">
-    <div class="subsection-header">
+    <div class="subsection-header hide" [ngClass]="{'show': show}">
         <h3>All Skills</h3>
   </div>
-    <div class="skills-other">
-
-  
+    <div class="skills-other hide" [ngClass]="{'show': show}">
         <div class="canvas-container">
             <div class="canvas">
               <div class="circle-container" *ngFor="let ball of numBalls; index as i" id="ball-{{i}}" >

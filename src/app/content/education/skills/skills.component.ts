@@ -46,6 +46,7 @@ export class SkillsComponent implements OnInit {
   numBalls = [];
   balls = [];
   openIindex:number = null;
+  show = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -158,5 +159,11 @@ export class SkillsComponent implements OnInit {
       this.openIindex = i;
 
     this.numBalls[i].open = !this.numBalls[i].open;
+  }
+
+  onView(e:any){
+    if(e.visible){
+      this.show = true;
+    }
   }
 }

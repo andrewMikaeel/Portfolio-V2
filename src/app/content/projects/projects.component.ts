@@ -21,6 +21,7 @@ export class ProjectsComponent implements OnInit {
     console.log(this.width);
     
   }
+  show = false;
   width:number = window.innerWidth;
   items: Array<number> = [];
   projects = [];
@@ -96,6 +97,8 @@ export class ProjectsComponent implements OnInit {
     // this.calcCardViews();
   
   }
+
+
   ngAfterViewInit(): void {
    this.glide = new Glide(this.gliderEl.nativeElement, {
       perView: 3,
@@ -127,6 +130,11 @@ export class ProjectsComponent implements OnInit {
     })
 
     this.mountGlider();
+  }
+
+  onView(e:any){
+    if(e.visible && !this.show)
+      this.show = true;
   }
   
   async mountGlider(){

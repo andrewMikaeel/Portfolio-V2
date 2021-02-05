@@ -15,6 +15,7 @@ export class EducationComponent implements OnInit {
   selectedId: number = 0;
   graduation = faGraduationCap;
   @ViewChild('educationTemplateItems', {static: true}) educationTemplateItems: ElementRef;
+  @ViewChild('hat', {static: true}) hat: ElementRef;
   constructor() { }
 
   ngOnInit(): void {
@@ -81,5 +82,11 @@ export class EducationComponent implements OnInit {
 
   openEducationItem(item: HTMLElement){
     item.style.maxHeight = item.scrollHeight + 'px';
+  }
+
+  onView(e) {
+    if(e.visible){
+      this.hat.nativeElement.style.animation = 'animateHat 3s ease-in-out forwards';
+    }
   }
 }

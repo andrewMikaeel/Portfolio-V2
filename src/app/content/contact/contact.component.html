@@ -3,7 +3,13 @@
         <h2>Contact</h2>
     </div>
     <div class="content">
-        <div class="buissness-card">
+        <div class="buissness-card hide"
+        inViewport
+        [inViewportOptions]="{ threshold: [0] }"
+        (inViewportAction)="onView($event)"
+        [ngClass]="{'show': show}"
+        #buissnessCard
+        >
             <div class="top">
                 <h3>647 786 7706</h3>
                 <div class="school">

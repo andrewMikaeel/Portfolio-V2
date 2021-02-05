@@ -82,17 +82,30 @@
         align-self: flex-start;
         .hat{
             position: absolute;
-            top: -51px;
-            right: 12px;
+            // top: -51px;
+            // right: 12px;
             // border: 1px solid black;
             width: 20px;
             height: 20px;
-            transform: rotate(25deg);
+            // transform: rotate(25deg);
+            transform: translate(10px, -57px);
+            // animation: animateHat 3s ease-in-out forwards;
             .icon{
                 font-size: 60px;
                 color: darken($color: $background-colour, $amount: 20);    
             }
         }
+    }
+
+    @keyframes animateHat {
+        0%{
+            transform: translate(10px, -57px) rotate(0);
+        }50%{
+            transform: translate(80px, -57px) rotate(0);
+        }
+        100%{
+            transform: translate(80px, -57px) rotate(25deg);
+        }   
     }
     .content{
         .education-item{
@@ -541,10 +554,6 @@
             flex-direction: column;
             position: relative;
             justify-content: space-between;
-            animation-name: floating;
-            animation-iteration-count: infinite;
-            animation-duration: 4s;
-            animation-timing-function: ease-in-out;
             h3{
                 font-family: $buissnessCard;
                 color: #292522;

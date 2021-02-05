@@ -3,7 +3,11 @@
         <h2>Projetcs</h2>
     </div>
     <div class="content">
-        <div class="project-container">
+        <div class="project-container hide" [ngClass]="{'show': show}"
+        inViewport
+        [inViewportOptions]="{ threshold: [0] }"
+        (inViewportAction)="onView($event)"
+        >
             
              <div class="project-cards" #projectsContainer >
                 <!-- <div class="card selected-card">
