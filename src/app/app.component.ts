@@ -130,9 +130,11 @@ export class AppComponent implements OnInit, AfterViewInit{
     //Initialy this function run for each section
     if(this.inViewPortCount < 5){
       if(e.visible){
-        this.currentSelectedItem.active = false;
-        this.currentSelectedItem = this.menu[menuItemIndex];
-        this.currentSelectedItem.active = true;
+        if(!this.menu[0].inViewPort || menuItemIndex === 0){
+          this.currentSelectedItem.active = false;
+          this.currentSelectedItem = this.menu[menuItemIndex];
+          this.currentSelectedItem.active = true;
+        }
       }
       this.inViewPortCount++;
       return;
