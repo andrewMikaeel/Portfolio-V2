@@ -45,7 +45,7 @@ export class AppComponent implements OnInit, AfterViewInit{
       { name: 'Education & Skills', active: false, id: 'education', inViewPort: false, index: 2, link: '#education', target: ''},
       { name: 'Projects', active: false, id: 'projects', inViewPort: false, index: 3, link: '#projects', target: ''},
       { name: 'Contact', active: false, id: 'contact', inViewPort: false, index: 4, link: '#contact', target: ''},
-      { name: 'Résumé', active: false, id: 'resume', inViewPort: false, index: 5, link: '', target: ''},
+      { name: 'Résumé', active: false, id: 'resume', inViewPort: false, index: 5, link: './../assets/Resume.pdf', target: ''},
       { name: 'GitHub', active: false, id: 'github', inViewPort: false, index: 6, link: 'https://github.com/mikandrew53/', target: '_blank'},
       { name: 'Linkedin', active: false, id: 'linkedin', inViewPort: false, index: 6, link: 'https://www.linkedin.com/in/andrew-mikaeel-171234141/', target: '_blank'}
     ]

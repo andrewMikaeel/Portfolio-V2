@@ -37,14 +37,15 @@ export class ProjectsLandingComponent implements OnInit {
   UITexts:UICard;
   UIProjects:UICard;
   @Output('seeProjectsClicked') seeProjects= new EventEmitter<any>();
+
   ngOnInit(): void {
 
     this.projects = [
-      './../../assets/Logo.png',
       './../../assets/code.jpg',
+      './../../assets/Logo.png',
       './../../assets/programmer.png',
-      './../../assets/Logo.png',
       './../../assets/code.jpg',
+      './../../assets/Logo.png',
       './../../assets/programmer.png'
     ];
 
