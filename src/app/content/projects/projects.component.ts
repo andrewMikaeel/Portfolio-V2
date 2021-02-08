@@ -39,52 +39,61 @@ export class ProjectsComponent implements OnInit {
     }
   this.projects = [
       {
-        title: 'Design Must Lead the Way on Artificial Intelligence and Machine Learning',
-        description: 'Artificial intelligence and machine learning technology are all around us...',
-        img: './../../../assets/code.jpg',
+        title: 'Sorting Algorithm Visualizer',
+        description: 'This is a web application that visualizes popular sorting algorithms. I implemented merge sort, quick sort, and bubble sort.',
+        img: './../../../assets/sorting.svg',
+        github: 'https://github.com/mikandrew53/Sorting-Visualizer',
+        link: 'https://xenodochial-kare-dde6be.netlify.app/',
+        target: '_blank',
         category: 'project-category',
-        next: null,
-        previous: null
+        live: true
       },
       {
-        title: 'Design Must Lead the Way on Artificial Intelligence and Machine Learning',
-        description: 'Artificial intelligence and machine learning technology are all around us...',
-        img: './../../../assets/code.jpg',
+        title: 'Weather App',
+        description: 'Web application to display current and past weather for various cities using the ‘metaweather’ api. The app is optimized o make the minimum amount of http requests in order to decrease traffic on the API.',
+        img: './../../../assets/weather.svg',
+        github: 'https://github.com/mikandrew53/Weather-App',
+        link: 'https://nervous-lamarr-1e19ac.netlify.app/',
+        target: '_blank',
         category: 'project-category',
-        next: null,
-        previous: null
+        live: true
       },
       {
-        title: 'Design Must Lead the Way on Artificial Intelligence and Machine Learning',
-        description: 'Artificial intelligence and machine learning technology are all around us...',
-        img: './../../../assets/code.jpg',
+        title: 'Online shopping form validator',
+        description: 'The checkout for an online store. The store has a dynamically updating shopping cart and form validation for checkout.',
+        img: './../../../assets/shopping.svg',
+        github: 'https://github.com/mikandrew53/Online-Shoping-Store',
+        link: 'https://silly-cori-c0bbc8.netlify.app/',
+        target: '_blank',
         category: 'project-category',
-        next: null,
-        previous: null
+        live: true
       },
       {
-        title: 'Design Must Lead the Way on Artificial Intelligence and Machine Learning',
-        description: 'Artificial intelligence and machine learning technology are all around us...',
-        img: './../../../assets/code.jpg',
+        title: 'Spotify Music Web App',
+        description: 'Web application will be built using the Spotify api and angular. The user will be able to login to their Spotify accout, or search and listen to music without an account.',
+        img: './../../../assets/music.svg',
+        link: '#',
+        target: '',
         category: 'project-category',
-        next: null,
-        previous: null
+        live: false
       },
       {
-        title: 'Design Must Lead the Way on Artificial Intelligence and Machine Learning',
-        description: 'Artificial intelligence and machine learning technology are all around us...',
-        img: './../../../assets/code.jpg',
+        title: 'Netflix Clone',
+        description: 'Web application that clones Netflix. Will be built using Angular, and the Glide.Js library. The Movie Database API will be used to fetch the movies and their images.',
+        img: './../../../assets/netflix.svg',
+        link: '#',
+        target: '',
         category: 'project-category',
-        next: null,
-        previous: null
+        live: false
       },
       {
-        title: 'Design Must Lead the Way on Artificial Intelligence and Machine Learning',
-        description: 'Artificial intelligence and machine learning technology are all around us...',
-        img: './../../../assets/code.jpg',
+        title: 'Battleship',
+        description: 'I will take existing battleship game logic and multiplayer capabilities, and build a front-end to put it all together using Angular.',
+        img: './../../../assets/battleship.svg',
+        link: '#',
+        target: '',
         category: 'project-category',
-        next: null,
-        previous: null
+        live: false
       },
     ]
     this.projects[0].next = this.projects[1];
@@ -159,7 +168,9 @@ export class ProjectsComponent implements OnInit {
   onClick(direction:string){
     direction === 'R' ? this.glide.go('>') : this.glide.go('<')
   }
+
+  onProjectClick(live:boolean, e:Event) {
+    if(!live) 
+      e.preventDefault();
+  }
 }
-
-  
-

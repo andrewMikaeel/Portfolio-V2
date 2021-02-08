@@ -522,15 +522,14 @@
                 .card{
                     width: 355px;
                     height: 490px;
-                    // border-radius: 10px;
                     box-shadow: 0 20px 20px rgba(0,0,0,.5);
                     transition: transform 350ms ease, box-shadow 350ms ease;
-                   
-                    &:hover{
-                        cursor: pointer;
-                        transform: scale(1.07);
-                        box-shadow: 1px 25px 25px rgba(0,0,0,0.6);
-                    }
+                }
+
+                .live:hover {
+                    cursor: pointer;
+                    transform: scale(1.07);
+                    box-shadow: 1px 25px 25px rgba(0,0,0,0.6);
                 }
             }
         }

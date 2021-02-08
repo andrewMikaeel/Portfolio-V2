@@ -21,13 +21,13 @@ interface UICard {
 export class ProjectsLandingComponent implements OnInit {
   constructor() { }
   glide;
-  projects2 = [];
   projects = [];
   currentProject = 0;
   arrowLeft = faChevronLeft;
   camera = faCamera;
   appStore = faAppStore;
   arrowUp = faArrowUp;
+  projectLinks;
   projectsUI:Array<HTMLElement> = [];
   @ViewChild('glide', {static: true}) gliderEl: ElementRef;
   @ViewChild('texts', {static: true}) textsEl: ElementRef;
@@ -41,13 +41,19 @@ export class ProjectsLandingComponent implements OnInit {
   ngOnInit(): void {
 
     this.projects = [
-      './../../assets/code.jpg',
-      './../../assets/Logo.png',
-      './../../assets/programmer.png',
-      './../../assets/code.jpg',
-      './../../assets/Logo.png',
-      './../../assets/programmer.png'
+      './../../assets/sorting.svg',
+      './../../assets/weather.svg',
+      './../../assets/shopping.svg',
+      // './../../assets/music.svg',
+      // './../../assets/netflix.svg',
+      // './../../assets/battleship.svg'
     ];
+
+    this.projectLinks = [
+      'https://xenodochial-kare-dde6be.netlify.app/',
+      'https://nervous-lamarr-1e19ac.netlify.app/',
+      'https://silly-cori-c0bbc8.netlify.app/'
+    ]
 
     this.UIProjects = {
       UIElement: this.projectsEl.nativeElement,
@@ -194,6 +200,13 @@ export class ProjectsLandingComponent implements OnInit {
 
   onSeeProjects() {
     this.seeProjects.emit();
+  }
+
+  onClickProject(index:number) {
+    if(this.UIProjects.open){
+      window.open(this.projectLinks[index], '_blank');
+    }
+
   }
 
 }
