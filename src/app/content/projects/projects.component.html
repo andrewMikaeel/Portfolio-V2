@@ -22,7 +22,6 @@
                       <div class="project-img">
                         <img src="{{project.img}}" alt="">
                       </div>
-                      <!-- <div class="line"></div> -->
                     </div>
                     
                     <div class="card-bottom" *ngIf="project.live">
@@ -41,11 +40,13 @@
                       <!-- <li class="card last-card"></li> -->
                       <a href="{{project.link}}" *ngFor="let project of projects; let i = index;" target="{{project.target}}" [ngClass]="{'live': project.live, 'card': true }" (click)="onProjectClick(project.live, $event)">
                         <li class="glide__slide" >
-                          <h3 class="project-title">Design Must Lead the Way on Artificial Intelligence and Machine Learning</h3>
-                          <p class="project-description">Artificial intelligence and machine learning technology are all around us...</p>
-                          <div class="project-img">
-                            <img src="{{project.img}}"alt="">
-                          </div>
+                          <h3 class="project-title">{{project.title}}</h3>
+                          <div class="middle">
+                            <p class="project-description">{{project.description}}</p>
+                            <div class="project-img">
+                              <img src="{{project.img}}" alt="">
+                            </div>
+                        </div>
                           <!-- <div class="line"></div> -->
                           <div class="card-bottom" *ngIf="project.live">
                             <a href="{{project.link}}" target="_blank" class="btn">Demo</a>
