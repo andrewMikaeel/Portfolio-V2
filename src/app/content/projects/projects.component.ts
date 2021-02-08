@@ -59,7 +59,7 @@ export class ProjectsComponent implements OnInit {
         live: true
       },
       {
-        title: 'Online Shopping Form Vlidator',
+        title: 'Online Shopping Form Validator',
         description: 'The checkout for an online store. The store has a dynamically updating shopping cart and form validation for checkout.',
         img: './../../../assets/shopping.svg',
         github: 'https://github.com/mikandrew53/Online-Shoping-Store',
