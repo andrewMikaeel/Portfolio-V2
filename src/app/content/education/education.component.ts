@@ -22,7 +22,7 @@ export class EducationComponent implements OnInit {
     this.educationItems.push({
       // header: 'BACHELOR OF ENGINEERIRNG',
       header: 'Bachelor of Engineering',
-      description: 'Currently in my thrid year at Ontario Tech University, studying software Engineering.',
+      description: 'Currently in my thrid year at Ontario Tech University, studying Software Engineering.',
       points: [
         'Gained Solid knowledge of computer sciennce fundementals, such as data structures and algorithms.',
         'Explored a wide range of topics in computer sciecnce and electrical engineering, in order to dervirsify my knowlege in Software Engineering.',
