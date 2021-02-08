@@ -24,9 +24,9 @@ export class EducationComponent implements OnInit {
       header: 'Bachelor of Engineering',
       description: 'Currently in my thrid year at Ontario Tech University, studying software Engineering.',
       points: [
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, saepe!',
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, saepe!',
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, saepe!'],
+        'Gained Solid knowledge of computer sciennce fundementals, such as data structures and algorithms.',
+        'Explored a wide range of topics in computer sciecnce and electrical engineering, in order to dervirsify my knowlege in Software Engineering.',
+      ],
         selected: false,
         id: 0,
         icon: faPlus
