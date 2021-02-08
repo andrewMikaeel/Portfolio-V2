@@ -70,7 +70,7 @@ export class ProjectsComponent implements OnInit {
       },
       {
         title: 'Spotify Music Web App',
-        description: 'Web application will be built using the Spotify api and angular. The user will be able to login to their Spotify accout, or search and listen to music without an account.',
+        description: 'Web application will be built using the Spotify api and angular. The user will be able to login to their Spotify account, or search and listen to music without an account.',
         img: './../../../assets/music.svg',
         link: '#',
         target: '',
@@ -88,7 +88,7 @@ export class ProjectsComponent implements OnInit {
       },
       {
         title: 'Battleship',
-        description: 'I will take existing battleship game logic and multiplayer capabilities, and build a front-end to put it all together using Angular.',
+        description: 'I will take existing battleship game logic and multiplayer capabilities and build a front-end to put it all together using Angular.',
         img: './../../../assets/battleship.svg',
         link: '#',
         target: '',
