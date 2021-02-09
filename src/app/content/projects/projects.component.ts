@@ -13,7 +13,7 @@ import Glide, {
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  @HostListener('window:resize', ['$event'])
+  // @HostListener('window:resize', ['$event'])
   // onResize(event) {
   //   event.target.innerWidth;
   //   this.width = event.target.innerWidth;
