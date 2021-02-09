@@ -31,7 +31,17 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.sorting {
+    background-color: rgb(39, 189, 189);
+}
 
+.weather {
+    background-color: rgb(39, 134, 189);    
+}
+
+.shopping {
+    background-color: rgb(77, 48, 131);
+}
 .card{
     max-width: 355px;
     min-height: 490px;

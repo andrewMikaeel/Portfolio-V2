@@ -40,14 +40,20 @@ export class ProjectsLandingComponent implements OnInit {
 
   ngOnInit(): void {
 
+    // this.projects = [
+    //   './../../assets/sorting.svg',
+    //   './../../assets/weather.svg',
+    //   './../../assets/shopping.svg',
+    //   // './../../assets/music.svg',
+    //   // './../../assets/netflix.svg',
+    //   // './../../assets/battleship.svg'
+    // ];
+
     this.projects = [
-      './../../assets/sorting.svg',
-      './../../assets/weather.svg',
-      './../../assets/shopping.svg',
-      // './../../assets/music.svg',
-      // './../../assets/netflix.svg',
-      // './../../assets/battleship.svg'
-    ];
+      {class: 'sorting', img: './../../assets/sorting.svg'},
+      {class: 'weather', img: './../../assets/weather.svg'},
+      {class: 'shopping', img: './../../assets/shopping.svg'},
+    ]
 
     this.projectLinks = [
       'https://xenodochial-kare-dde6be.netlify.app/',

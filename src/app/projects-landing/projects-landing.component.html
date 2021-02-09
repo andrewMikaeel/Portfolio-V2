@@ -46,7 +46,7 @@
           <ul class="glide__slides slider" >
             <li class="glide__slide project" *ngFor="let project of projects; let i = index;">
               <div class="project-wrapper" (mouseenter)="onHoverProject(i)" (mouseleave)="onMouseLeaveProject(i)" id="proj-{{i}}" (click)="onClickProject(i)">
-                <img class="gif" src="{{project}}"   alt="">
+                <img class="gif {{ project.class}}" src="{{project.img}}"   alt="">
               </div>
             </li>
           </ul>
