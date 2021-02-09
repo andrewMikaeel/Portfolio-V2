@@ -22,9 +22,7 @@ export class ContactComponent implements OnInit {
 
   async changeAnimation(){
     await this.move(1000);
-    console.log(this.buissnessCard.nativeElement.animation);
     this.buissnessCard.nativeElement.animation = 'floating ease-in-out infinite 4s';
-    console.log(this.buissnessCard.nativeElement.animation);
     // name duration timing-function delay iteration-count direction fill-mode;
 
   }

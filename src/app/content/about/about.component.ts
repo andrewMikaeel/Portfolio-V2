@@ -12,11 +12,9 @@ export class AboutComponent implements OnInit {
   show = false;
   ngOnInit(): void {
     this.lines = document.getElementsByClassName('line')
-    // console.log(this.lines[0].childNodes.length);
   }
   
   async animate(e:any){
-    console.log(e)
     if(e.visible){
       let j = 10;
       for(let i = 0; i < this.lines.length; i++){

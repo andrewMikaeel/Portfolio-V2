@@ -14,13 +14,12 @@ import Glide, {
 })
 export class ProjectsComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    event.target.innerWidth;
-    this.width = event.target.innerWidth;
-    // this.calcCardViews();
-    console.log(this.width);
+  // onResize(event) {
+  //   event.target.innerWidth;
+  //   this.width = event.target.innerWidth;
+  //   // this.calcCardViews();
     
-  }
+  // }
   show = false;
   width:number = window.innerWidth;
   items: Array<number> = [];
