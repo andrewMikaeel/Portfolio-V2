@@ -68,6 +68,16 @@ export class ProjectsComponent implements OnInit {
         live: true
       },
       {
+        title: 'Netflix Clone... Under Construction',
+        description: 'Web application that clones Netflix. Currenltly being built using Angular. The Movie Database API will be used to fetch the movies and their images. Firebase authentication is being leveraged for authentication. ',
+        img: './../../../assets/netflix.svg',
+        link: 'https://netflix-clone-9fb80.web.app/login',
+        github: 'https://github.com/mikandrew53/Netflix-Clone',
+        target: '_blank',
+        category: 'project-category',
+        live: true
+      },
+      {
         title: 'Spotify Music Web App',
         description: 'Web application will be built using the Spotify api and angular. The user will be able to login to their Spotify account, or search and listen to music without an account.',
         img: './../../../assets/music.svg',
@@ -76,15 +86,7 @@ export class ProjectsComponent implements OnInit {
         category: 'project-category',
         live: false
       },
-      {
-        title: 'Netflix Clone',
-        description: 'Web application that clones Netflix. Will be built using Angular, and the Glide.Js library. The Movie Database API will be used to fetch the movies and their images.',
-        img: './../../../assets/netflix.svg',
-        link: '#',
-        target: '',
-        category: 'project-category',
-        live: false
-      },
+      
       {
         title: 'Battleship',
         description: 'I will take existing battleship game logic and multiplayer capabilities and build a front-end to put it all together using Angular.',
