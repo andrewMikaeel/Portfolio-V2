@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit, AfterViewInit, HostListener } from '@angular/core';
 import jump from 'node_modules/jump.js/dist/jump.module.js';
+import { environment } from '../environments/environment';
+import firebase from "firebase";
 
 interface menu {
   name: string,
@@ -20,7 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   @ViewChild('navLinks') navLinks: ElementRef;
   @ViewChild('profile') profile: ElementRef;
   @ViewChild('content') content: ElementRef;
-
+  
   links: Array<HTMLElement> = [];
   menu: Array<menu> = [];
   currentSelectedItem: menu;
@@ -31,6 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   stopeAtMenuIndex: number = 0;
   currentCountMenu:number = 0;
   goingUp:boolean = false;
+  
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
     if(event.key === "Escape")
@@ -39,17 +42,19 @@ export class AppComponent implements OnInit, AfterViewInit{
   constructor() {}
 
   ngOnInit() {
+    firebase.initializeApp(environment.firebaseConfig);
     this.menu = [
       { name: 'Home', active: false, id: 'home', inViewPort: false, index: 0, link: '#', target: ''},
       { name: 'About', active: false, id: 'about', inViewPort: false, index: 1, link: '#about', target: ''},
       { name: 'Education & Skills', active: false, id: 'education', inViewPort: false, index: 2, link: '#education', target: ''},
       { name: 'Projects', active: false, id: 'projects', inViewPort: false, index: 3, link: '#projects', target: ''},
       { name: 'Contact', active: false, id: 'contact', inViewPort: false, index: 4, link: '#contact', target: ''},
-      { name: 'Résumé', active: false, id: 'resume', inViewPort: false, index: 5, link: './../assets/Resume.pdf', target: ''},
+      { name: 'Resume', active: false, id: 'resume', inViewPort: false, index: 5, link: './../assets/Resume.pdf', target: ''},
       { name: 'GitHub', active: false, id: 'github', inViewPort: false, index: 6, link: 'https://github.com/mikandrew53/', target: '_blank'},
       { name: 'Linkedin', active: false, id: 'linkedin', inViewPort: false, index: 6, link: 'https://www.linkedin.com/in/andrew-mikaeel-171234141/', target: '_blank'}
     ]
     this.currentSelectedItem = this.menu[0];
+    firebase
   }
 
   
