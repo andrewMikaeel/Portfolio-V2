@@ -33,6 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   stopeAtMenuIndex: number = 0;
   currentCountMenu:number = 0;
   goingUp:boolean = false;
+  firebaseAnalytics;
   
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
@@ -43,6 +44,8 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   ngOnInit() {
     firebase.initializeApp(environment.firebaseConfig);
+    this.firebaseAnalytics = firebase.analytics();
+
     this.menu = [
       { name: 'Home', active: false, id: 'home', inViewPort: false, index: 0, link: '#', target: ''},
       { name: 'About', active: false, id: 'about', inViewPort: false, index: 1, link: '#about', target: ''},

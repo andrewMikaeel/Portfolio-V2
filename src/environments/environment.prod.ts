@@ -10,5 +10,5 @@ export const environment = {
     appId: "1:902661401576:web:2f4d4682e7dc665f55925d",
     measurementId: "G-QSD16VEMZ5"
   },
-  firebaseAnalytics: firebase.analytics()
+  // firebaseAnalytics: firebase.analytics()
 };

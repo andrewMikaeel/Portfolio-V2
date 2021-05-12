@@ -58,6 +58,26 @@ export class ProjectsComponent implements OnInit {
         live: true
       },
       {
+        title: 'Netflix Clone... Under Construction',
+        description: 'Web application that clones Netflix. Currenltly being built using Angular. The Movie Database API will be used to fetch the movies and their images. Firebase authentication is being leveraged for authentication. ',
+        img: './../../../assets/netflix.svg',
+        link: 'https://netflix-clone-9fb80.web.app/',
+        github: 'https://github.com/mikandrew53/Netflix-Clone',
+        target: '_blank',
+        category: 'project-category',
+        live: true
+      },
+      {
+        title: 'The Shoppies: Movie Awards',
+        description: 'This project was a challenge that was put forth by Shopify. It’s objective is to provide a platform for employees to nominate 5 movies for The Shoppies: Movie Awards, as well as provide sharable links that the employees can use to share their nominations.',
+        img: './../../../assets/Stellaris-Clapper-board.svg',
+        link: 'https://shoppies-5b855.firebaseapp.com/',
+        github: 'https://github.com/mikandrew53/Movie-Awards',
+        target: '_blank',
+        category: 'project-category',
+        live: true
+      },
+      {
         title: 'Online Shopping Form Validator',
         description: 'The checkout for an online store. The store has a dynamically updating shopping cart and form validation for checkout.',
         img: './../../../assets/shopping.svg',
@@ -68,21 +88,11 @@ export class ProjectsComponent implements OnInit {
         live: true
       },
       {
-        title: 'Netflix Clone... Under Construction',
-        description: 'Web application that clones Netflix. Currenltly being built using Angular. The Movie Database API will be used to fetch the movies and their images. Firebase authentication is being leveraged for authentication. ',
-        img: './../../../assets/netflix.svg',
-        link: 'https://netflix-clone-9fb80.web.app/login',
-        github: 'https://github.com/mikandrew53/Netflix-Clone',
-        target: '_blank',
-        category: 'project-category',
-        live: true
-      },
-      {
         title: 'Spotify Music Web App',
         description: 'Web application will be built using the Spotify api and angular. The user will be able to login to their Spotify account, or search and listen to music without an account.',
         img: './../../../assets/music.svg',
         link: '#',
-        target: '',
+        target: '_blank',
         category: 'project-category',
         live: false
       },
