@@ -50,15 +50,16 @@ export class ProjectsLandingComponent implements OnInit {
     // ];
 
     this.projects = [
+      {class: 'weather', img: './../../assets/Stellaris-Clapper-board.svg'},
       {class: 'sorting', img: './../../assets/sorting.svg'},
-      {class: 'weather', img: './../../assets/weather.svg'},
-      {class: 'shopping', img: './../../assets/shopping.svg'},
+      {class: 'netflix', img: './../../assets/netflix.svg'},
+      // {class: 'movie', img: './../../assets/netflix.svg'},
     ]
 
     this.projectLinks = [
+      'https://shoppies-5b855.firebaseapp.com',
       'https://xenodochial-kare-dde6be.netlify.app/',
-      'https://nervous-lamarr-1e19ac.netlify.app/',
-      'https://silly-cori-c0bbc8.netlify.app/'
+      'https://netflix-clone-9fb80.web.app'
     ]
 
     this.UIProjects = {
