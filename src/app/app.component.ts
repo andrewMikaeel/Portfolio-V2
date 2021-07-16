@@ -54,7 +54,7 @@ export class AppComponent implements OnInit, AfterViewInit{
       { name: 'Contact', active: false, id: 'contact', inViewPort: false, index: 4, link: '#contact', target: ''},
       { name: 'Resume', active: false, id: 'resume', inViewPort: false, index: 5, link: './../assets/Resume.pdf', target: ''},
       { name: 'GitHub', active: false, id: 'github', inViewPort: false, index: 6, link: 'https://github.com/mikandrew53/', target: '_blank'},
-      { name: 'Linkedin', active: false, id: 'linkedin', inViewPort: false, index: 6, link: 'https://www.linkedin.com/in/andrew-mikaeel-171234141/', target: '_blank'}
+      { name: 'LinkedIn', active: false, id: 'linkedin', inViewPort: false, index: 6, link: 'http://www.linkedin.com/in/andrew-mikaeel/', target: '_blank'}
     ]
     this.currentSelectedItem = this.menu[0];
     firebase

@@ -554,8 +554,12 @@
             position: relative;
             justify-content: space-between;
             h3{
-                font-family: $buissnessCard;
+                a{
+
+                    color: #292522;
+                }
                 color: #292522;
+                font-family: $buissnessCard;
                 font-weight: 600;
                 max-height: 20px;
             }
