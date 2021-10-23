@@ -48,21 +48,11 @@ export class ProjectsComponent implements OnInit {
         live: true
       },
       {
-        title: 'Weather App',
-        description: 'Web application to display current and past weather for various cities using the ‘metaweather’ api. The app is optimized o make the minimum amount of http requests in order to decrease traffic on the API.',
-        img: './../../../assets/weather.svg',
-        github: 'https://github.com/mikandrew53/Weather-App',
-        link: 'https://nervous-lamarr-1e19ac.netlify.app/',
-        target: '_blank',
-        category: 'project-category',
-        live: true
-      },
-      {
-        title: 'Netflix Clone... Under Construction',
-        description: 'Web application that clones Netflix. Currenltly being built using Angular. The Movie Database API will be used to fetch the movies and their images. Firebase authentication is being leveraged for authentication. ',
-        img: './../../../assets/netflix.svg',
-        link: 'https://netflix-clone-9fb80.web.app/',
-        github: 'https://github.com/mikandrew53/Netflix-Clone',
+        title: 'Spacetagram',
+        description: 'The purpose of this web app is to utilize the NASA API to pull images (and its metadata), and allow the user to “like” and “unlike” their favourite images.',
+        img: './../../../assets/rocket.png',
+        github: 'https://github.com/mikandrew53/Spacestagram',
+        link: 'https://spacetagram-a514f.firebaseapp.com',
         target: '_blank',
         category: 'project-category',
         live: true
@@ -73,6 +63,17 @@ export class ProjectsComponent implements OnInit {
         img: './../../../assets/Stellaris-Clapper-board.svg',
         link: 'https://shoppies-5b855.firebaseapp.com/',
         github: 'https://github.com/mikandrew53/Movie-Awards',
+        target: '_blank',
+        category: 'project-category',
+        live: true
+      },
+
+      {
+        title: 'Weather App',
+        description: 'Web application to display current and past weather for various cities using the ‘metaweather’ api. The app is optimized o make the minimum amount of http requests in order to decrease traffic on the API.',
+        img: './../../../assets/weather.svg',
+        github: 'https://github.com/mikandrew53/Weather-App',
+        link: 'https://nervous-lamarr-1e19ac.netlify.app/',
         target: '_blank',
         category: 'project-category',
         live: true
@@ -88,21 +89,22 @@ export class ProjectsComponent implements OnInit {
         live: true
       },
       {
+        title: 'Netflix Clone... Under Construction',
+        description: 'Web application that clones Netflix. Currenltly being built using Angular. The Movie Database API will be used to fetch the movies and their images. Firebase authentication is being leveraged for authentication. ',
+        img: './../../../assets/netflix.svg',
+        link: 'https://netflix-clone-9fb80.web.app/',
+        github: 'https://github.com/mikandrew53/Netflix-Clone',
+        target: '_blank',
+        category: 'project-category',
+        live: true
+      },
+
+      {
         title: 'Spotify Music Web App',
         description: 'Web application will be built using the Spotify api and angular. The user will be able to login to their Spotify account, or search and listen to music without an account.',
         img: './../../../assets/music.svg',
         link: '#',
         target: '_blank',
-        category: 'project-category',
-        live: false
-      },
-      
-      {
-        title: 'Battleship',
-        description: 'I will take existing battleship game logic and multiplayer capabilities and build a front-end to put it all together using Angular.',
-        img: './../../../assets/battleship.svg',
-        link: '#',
-        target: '',
         category: 'project-category',
         live: false
       },
