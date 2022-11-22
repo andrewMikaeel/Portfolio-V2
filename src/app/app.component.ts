@@ -22,7 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   @ViewChild('navLinks') navLinks: ElementRef;
   @ViewChild('profile') profile: ElementRef;
   @ViewChild('content') content: ElementRef;
-  
+
   links: Array<HTMLElement> = [];
   menu: Array<menu> = [];
   currentSelectedItem: menu;
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   currentCountMenu:number = 0;
   goingUp:boolean = false;
   firebaseAnalytics;
-  
+
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
     if(event.key === "Escape")
@@ -54,21 +54,21 @@ export class AppComponent implements OnInit, AfterViewInit{
       { name: 'Contact', active: false, id: 'contact', inViewPort: false, index: 4, link: '#contact', target: ''},
       { name: 'Resume', active: false, id: 'resume', inViewPort: false, index: 5, link: './../assets/Resume.pdf', target: ''},
       { name: 'GitHub', active: false, id: 'github', inViewPort: false, index: 6, link: 'https://github.com/mikandrew53/', target: '_blank'},
-      // { name: 'LinkedIn', active: false, id: 'linkedin', inViewPort: false, index: 6, link: 'http://www.linkedin.com/in/andrew-mikaeel/', target: '_blank'}
+      { name: 'LinkedIn', active: false, id: 'linkedin', inViewPort: false, index: 6, link: 'http://www.linkedin.com/in/andrew-mikaeel/', target: '_blank'}
     ]
     this.currentSelectedItem = this.menu[0];
     firebase
   }
 
-  
+
   ngAfterViewInit() {
     this.navLinks.nativeElement.childNodes.forEach(link => {
       if(link.tagName === 'LI')
         this.links.push(link);
     });
   }
-  
- 
+
+
 
   closeAnimation() {
     this.links.forEach((link: HTMLElement) => link.style.animation = '' );
@@ -89,7 +89,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   toggle(){
     this.navActive ? this.close() : this.open();
   }
-  
+
   overlayClick(){
     if (!this.navActive) return;
     this.close();
@@ -112,10 +112,10 @@ export class AppComponent implements OnInit, AfterViewInit{
       this.goingUp = true;
     }
     this.currentCountMenu = 0;
-    
+
     if(this.menu[1] === menuItem)
       this.aboutClicked = true;
-    else 
+    else
       this.aboutClicked = false;
 
     if (menuItem.active){
@@ -131,7 +131,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     }
       this.close(true);
   }
-  
+
   inViewPort(menuItemIndex:number, e:any){
     this.menu[menuItemIndex].inViewPort = e.visible;
 
@@ -181,7 +181,7 @@ export class AppComponent implements OnInit, AfterViewInit{
       }else {
         this.changeMenuItem(4);
       }
-    } 
+    }
   }
 
   changeMenuItem(newIndex) {
